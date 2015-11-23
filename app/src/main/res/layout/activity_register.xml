@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffffff"
+    tools:context="com.example.gabrielaispuro.appmadero.Activity.RegisterActivity"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playa_miramar"
+        android:layout_gravity="center"
+        android:layout_marginTop="5pt"/>
+
+    <EditText
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_email"
+        android:layout_gravity="center_horizontal"
+        android:hint="E-mail"
+        android:layout_marginTop="20pt"/>
+
+    <EditText
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_password"
+        android:layout_gravity="center_horizontal"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_marginTop="10pt"/>
+
+    <EditText
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_password2"
+        android:layout_gravity="center_horizontal"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_marginTop="10pt"/>
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/guardar_boton"
+        android:layout_marginTop="10pt"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gabrielaispuro.appmadero.Fragments.ShowParquesFragment">
+
+
+    <ProgressBar android:id="@+id/progressBar_parquesShow"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity = "center_vertical|center_horizontal"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="267dp"
+                android:layout_height="99dp"
+                android:src="@drawable/tamaulipas"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/txtView_tituloParques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingTop="8pt"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+
+            <com.parse.ParseImageView
+                android:id="@+id/parseImageView_img_principal"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:paddingTop="8pt"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/layaout_Relative_direccionParques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_linear_direccionParques"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5pt"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/lblView_direccionParques"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/direccion"
+                        android:textStyle="bold"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/txtView_direccionParques"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="7pt"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_descripcionParques"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8pt"
+                    android:layout_below="@+id/layout_linear_direccionParques">
+
+                    <TextView
+                        android:id="@+id/lblView_descripcion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/descripcion"
+                        android:textSize="7pt"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtView_descripcion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="7pt"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_imagenes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/layout_descripcionParques"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/imgView_leftArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/left_arrow"
+                        android:clickable="true" />
+
+                    <com.parse.ParseImageView
+                        android:id="@+id/parseImageView_img_instalaciones"
+                        android:layout_width="208dp"
+                        android:layout_height="167dp"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:id="@+id/imgView_rightArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/right_arrow"
+                        android:clickable="true" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_google_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6pt"
+                    android:layout_below="@+id/layout_imagenes">
+
+                    <ImageView
+                        android:id="@+id/imgView_google_maps"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/google_maps_button"
+                        android:baselineAlignBottom="false"
+                        android:clickable="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

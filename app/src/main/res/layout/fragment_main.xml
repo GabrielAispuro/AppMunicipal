@@ -1,0 +1,171 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffffff"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:id="@+id/root_scroll">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/escudo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/madero"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="32dp" />
+
+            <TextView
+                android:id="@+id/txtView_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_below="@+id/escudo"/>
+
+            <TextView
+                android:id="@+id/txtView_monumentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Monumentos Arquitectónicos"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_about"/>
+
+            <TextView
+                android:id="@+id/txtView_monnumentos_contenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_monumentos"/>
+
+            <TextView
+                android:id="@+id/txtView_monumentos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Monumentos Históricos"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_monnumentos_contenido"/>
+
+            <TextView
+                android:id="@+id/txtView_monumentos_contenido2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_monumentos2"/>
+
+            <TextView
+                android:id="@+id/txtView_artes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Literatura, música y poesía"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_monumentos_contenido2"/>
+
+            <TextView
+                android:id="@+id/txtView_artes2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_artes"/>
+
+            <TextView
+                android:id="@+id/txtView_fiestas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Fiestas populares"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_artes2"/>
+
+            <TextView
+                android:id="@+id/txtView_fiestas2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_fiestas"/>
+
+            <TextView
+                android:id="@+id/txtView_localizacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Localización"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_fiestas2"/>
+
+            <TextView
+                android:id="@+id/txtView_localizacion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_localizacion"/>
+
+            <TextView
+                android:id="@+id/txtView_clima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Clima"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_localizacion2"/>
+
+            <TextView
+                android:id="@+id/txtView_clima2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_clima"/>
+
+            <TextView
+                android:id="@+id/txtView_orografia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                android:text="Orografía"
+                android:layout_marginTop="4pt"
+                android:layout_below="@+id/txtView_clima2"/>
+
+            <TextView
+                android:id="@+id/txtView_orografia2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="7pt"
+                android:layout_marginTop="2pt"
+                android:layout_below="@+id/txtView_orografia"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

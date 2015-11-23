@@ -1,0 +1,191 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp"
+    android:weightSum="1"
+    android:background="#ffffffff"
+    tools:context="com.example.gabrielaispuro.appmadero.Fragments.ReporteProblema">
+
+    <ImageView
+        android:id="@+id/imgView_tamaulipas"
+        android:layout_width="267dp"
+        android:layout_height="99dp"
+        android:src="@drawable/tamaulipas"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10pt">
+
+            <LinearLayout
+                android:id="@+id/layout_dia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="Fecha:"
+                    android:paddingRight="10pt"/>
+
+                <EditText
+                    android:id="@+id/etxt_fromdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_titular_solicitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_dia"
+                android:paddingTop="10pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="Titular:"
+                    android:paddingRight="5pt"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_titular"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_titular_direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_titular_solicitud"
+                android:paddingTop="10pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="@string/direccion"
+                    android:paddingRight="5pt"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_direccion"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_descripcion_solicitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_titular_direccion">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="@string/descripcion"
+                    android:paddingRight="5pt"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="141dp"
+                    android:id="@+id/editText_descripcion"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tipo_solicitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_descripcion_solicitud"
+                android:paddingTop="12pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="Tipo de Evento:"
+                    android:paddingRight="5pt"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_solicitud"
+                    android:layout_gravity="right"
+                    android:paddingLeft="4pt"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingTop="10pt"
+                android:layout_below="@+id/layout_tipo_solicitud">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="Hora del evento:"
+                    android:paddingRight="5pt"/>
+
+                <EditText
+                    android:id="@+id/etxt_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_time_picker"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/guardar_boton"
+                    android:paddingTop="10pt"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

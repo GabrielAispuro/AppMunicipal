@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp"
+    android:weightSum="1"
+    android:background="#ffffffff">
+
+    <ImageView
+        android:id="@+id/imgView_nearest_parques"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/nearest"/>
+
+    <TextView
+        android:id="@+id/lbl_nearest_parques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_nearest"
+        android:textStyle="bold"
+        android:textSize="5pt"
+        android:layout_gravity="center"/>
+
+
+    <ProgressBar android:id="@+id/progressBar_parques"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity = "center_vertical|center_horizontal"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+    <ListView
+        android:id="@+id/list_parques"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView"
+        android:layout_gravity="center_horizontal|bottom">
+    </ListView>
+
+</LinearLayout>
