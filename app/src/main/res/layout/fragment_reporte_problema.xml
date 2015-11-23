@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp"
+    android:weightSum="1"
+    android:background="#ffffffff"
+    tools:context="com.example.gabrielaispuro.appmadero.Fragments.ReporteProblema">
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgView_tamaulipas"
+                android:layout_width="267dp"
+                android:layout_height="99dp"
+                android:src="@drawable/tamaulipas"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/layout_tipoReporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="4pt"
+                android:visibility="gone"
+                android:layout_below="@+id/imgView_tamaulipas">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="@string/tipo_reporte"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    android:layout_gravity="right"
+                    android:paddingLeft="4pt"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6pt"
+                android:layout_below="@+id/layout_tipoReporte">
+
+                <TextView
+                    android:id="@+id/txtView_telefono_reporte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:text="@string/telefono"
+                    android:visibility="gone"
+                    android:paddingRight="4pt"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:maxLength="10"
+                    android:visibility="gone"
+                    android:id="@+id/editText_telefono"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_descripcionReporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6pt"
+                android:layout_below="@+id/layout_telefono">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:textStyle="bold"
+                    android:paddingRight="4pt"
+                    android:text="@string/descripcion"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="141dp"
+                    android:id="@+id/editText_descripcion"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/layout_descripcionReporte">
+
+                <ImageView
+                    android:id="@+id/camera_button"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/camera_icon"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:paddingTop="5pt"/>
+
+                <ImageView
+                    android:id="@+id/google_maps"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/google_maps_button"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:paddingTop="5pt"/>
+
+                <TextView
+                    android:id="@+id/txtView_reporte_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Captura tu posición"
+                    android:visibility="gone"
+                    android:paddingTop="2pt"/>
+
+                <ImageView
+                    android:id="@+id/save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/guardar_boton"
+                    android:paddingTop="10pt"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

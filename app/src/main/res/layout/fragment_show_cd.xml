@@ -1,0 +1,368 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gabrielaispuro.appmadero.Fragments.ShowCDFragment">
+
+
+    <ProgressBar android:id="@+id/progressBar_CDShow"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity = "center_vertical|center_horizontal"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="267dp"
+                android:layout_height="99dp"
+                android:src="@drawable/tamaulipas"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/txtView_tituloCD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingTop="8pt"
+                android:textSize="8pt"
+                android:textStyle="bold"/>
+
+
+            <com.parse.ParseImageView
+                android:id="@+id/parseImageView_img_principal"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:paddingTop="8pt"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/layaout_direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                     android:id="@+id/layout_direccionCD"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                    android:paddingTop="5pt"
+                     android:orientation="horizontal">
+
+
+                     <TextView
+                         android:id="@+id/lblView_direccion"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:text="@string/direccion"
+                         android:textStyle="bold"
+                         android:textSize="7pt"/>
+
+                     <TextView
+                         android:id="@+id/txtView_direccion"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="2"
+                         android:textSize="7pt"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/layout_cursos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8pt"
+                        android:layout_below="@+id/layout_direccionCD">
+
+                        <TextView
+                            android:id="@+id/lblView_cursos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cursos"
+                            android:textSize="7pt"
+                            android:textStyle="bold"/>
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout_cursos1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_curso1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="20pt">
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos1_nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos1_dias"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos1_horario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_curso2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:layout_below="@+id/linearLayout_curso1"
+                                android:paddingLeft="20pt">
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos2_nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos2_dias"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos2_horario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_curso3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:layout_below="@+id/linearLayout_curso2"
+                                android:paddingLeft="20pt">
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos3_nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos3_dias"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos3_horario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_curso4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_below="@+id/linearLayout_curso3"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="20pt">
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos4_nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos4_dias"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos4_horario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_curso5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_below="@+id/linearLayout_curso4"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="20pt">
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos5_nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos5_dias"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos5_horario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_curso6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_below="@+id/linearLayout_curso5"
+                                android:paddingTop="5dp"
+                                android:paddingLeft="20pt">
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos6_nombre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos6_dias"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+                                <TextView
+                                    android:id="@+id/txtView_cursos6_horario"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textSize="6pt"/>
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_imagenes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/layout_cursos"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/imgView_leftArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/left_arrow"
+                        android:clickable="true" />
+
+                    <com.parse.ParseImageView
+                        android:id="@+id/parseImageView_img_instalaciones"
+                        android:layout_width="208dp"
+                        android:layout_height="167dp"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:id="@+id/imgView_rightArrow"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/right_arrow"
+                        android:clickable="true" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_google_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6pt"
+                    android:layout_below="@+id/layout_imagenes">
+
+                    <ImageView
+                        android:id="@+id/imgView_google_maps"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/google_maps_button"
+                        android:baselineAlignBottom="false"
+                        android:clickable="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
